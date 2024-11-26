@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: a3tierarchitecturedemo
+  namespace: namespace-workflow-1732610446274
+  labels:
+    kubernetes.azure.com/generator: devhub
+spec:
+  type: LoadBalancer
+  selector:
+    app: a3tierarchitecturedemo
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
